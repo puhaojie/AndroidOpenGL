@@ -1,2 +1,5 @@
-# AndroidOpenGL
- 关于android中opengl入门教学系列
+# 关于android中opengl入门教学系列
+
+
+### 例子不过度的封装，尽可能的还原本来步骤
+
