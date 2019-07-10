@@ -4,6 +4,8 @@ import android.content.Context;
 import android.opengl.GLSurfaceView;
 import android.util.AttributeSet;
 
+import com.phj.opengl.ibo.IBOTriggerRender;
+
 
 /**
  * 描述：画三角形的GLSurfaceView
@@ -21,7 +23,7 @@ public class TriggerGLSurfaceView extends GLSurfaceView {
     public TriggerGLSurfaceView(Context context, AttributeSet attrs) {
         super(context, attrs);
         setEGLContextClientVersion(2);
-        mRender = new AjustTriggerRender();
+        mRender = new IBOTriggerRender();
         setRenderer(mRender);
 
         //只有在绘制数据改变时才绘制view，可以防止GLSurfaceView帧重绘
