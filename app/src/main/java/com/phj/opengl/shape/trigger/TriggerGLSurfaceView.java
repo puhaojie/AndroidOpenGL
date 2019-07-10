@@ -1,10 +1,13 @@
 package com.phj.opengl.shape.trigger;
 
 import android.content.Context;
+import android.graphics.BitmapFactory;
 import android.opengl.GLSurfaceView;
 import android.util.AttributeSet;
 
+import com.phj.opengl.R;
 import com.phj.opengl.ibo.IBOTriggerRender;
+import com.phj.opengl.image.ImageRender;
 
 
 /**
@@ -23,7 +26,7 @@ public class TriggerGLSurfaceView extends GLSurfaceView {
     public TriggerGLSurfaceView(Context context, AttributeSet attrs) {
         super(context, attrs);
         setEGLContextClientVersion(2);
-        mRender = new IBOTriggerRender();
+        mRender = new ImageRender(BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher));
         setRenderer(mRender);
 
         //只有在绘制数据改变时才绘制view，可以防止GLSurfaceView帧重绘
